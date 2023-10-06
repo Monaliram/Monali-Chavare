@@ -1,0 +1,75 @@
+
+
+{
+  "sidebar": {
+    "title":"صباح الخير",
+    "menu-1": "إدارة النظام",
+    "menu-2":"المستودعات الخاصة",
+    "menu-3":"ترخيص وكالة تنظيف" ,
+    "menu-32":" الأحداث الرياضية",
+    "menu-4":"تسجيل",
+    "sub-menu-1":"ادارة الحساب",
+    "sub-menu-2":"تفعيل حساب",
+    "sub-menu-3": "إدارةالمستخدم",
+    "sub-menu-4":"الموافقة على وكيل المقاصة",
+    "sub-menu-5":"إعادة تعيين كلمة المرور/",
+    "sub-menu-52":"فتح المستخدم",
+    "sub-menu-6":"طباعة بطاقة هوية المستخدم",
+    "sub-menu-7":"ابحث عن متداولي AEO",
+    "sub-menu-8":"إنشاء طلب",
+    "menu-5":"بيان البضائع",
+    "menu-6":"البضائع المحتجزة",
+    "menu-7":"تصريح",
+    "menu-8":"إدارة التعرفة"
+  },
+  "header":{
+    "home-btn":"بيت",
+    "contact-us-btn":"اتصل بنا",
+    "Logout-btn":"تسجي خروج"
+  },
+  "table":{
+    "s-no-text":"س/لا",
+    "crnumber-text":"رقم السجل التجاري",
+    "agency-name-text":"اسم الوكالة",
+    "custom-code-text":"التعليمات البرمجية المخصصة",
+    "creation-date-format-text":"تنسيق تاريخ الإنشاء",
+    "clearing-agency-type-text":"نوع وكالة المقاصة",
+    "status-text":"حالة",
+    "establishment-id-text":"معرف المنشأة",
+    "creation-date-to-text":"تاريخ الإنشاء إلى"
+  },
+  "form-text":{
+    "crNumber":"رقم السجل التجاري:",
+    "agencyName":"اسم الوكالة:",
+    "customCode":"رمز جمركي:",
+    "datefrom":"تاريخ الإنشاء من:",
+    "selet-type":"نوع وكالة المقاصة:",
+    "status":"حالة:",
+    "establishmentId":"رقم المنشأة:",
+    "clearingAgencyType":"نوع وكالة المقاصة:",
+    "creationDateTo":"تاريخ الإنشاء إلى:",
+    "agencyType-1":"--الجميع--",
+    "agencyType-2":"خاص",
+    "agencyType-3":"الحكومة",
+    "status-1":"--اختر واحدة--",
+    "status-2":"ما زال يحتاج بتصدير",
+    "status-3":"مرفوض",
+    "searchText":"يبحث:",
+    "resetText":"إعادة ضبط:"
+
+  },
+  "datatable":{
+    "record1":{"sr":"واحد",
+     "establishmentId":"إثنا عشر مليون وثلاثة مائة وستة وخمسون ألف وسبعة مائة وأربعة وثمانون",
+     "customCode":"L2775",
+     "agencyName":"newnm2",
+     "status":"ما زال يحتاج بتصدير",
+     "creationdateto": "27/08/2023",
+     "clearingAgencyType":"الحكومة"
+    }
+   }
+
+  
+
+  
+}

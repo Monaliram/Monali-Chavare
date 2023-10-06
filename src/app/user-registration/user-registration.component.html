@@ -1,0 +1,639 @@
+<div class="row mg-0 header" style="padding: 20px; text-align: -webkit-right">
+  <div class="col-lg-12">
+    <select
+      #langSelect
+      (change)="translate.use(langSelect.value)"
+      style="text-align: left"
+      (change)="selecteLang($event)"
+    >
+      <option
+        *ngFor="let lang of translate.getLangs()"
+        [value]="lang"
+        [selected]="lang === translate.currentLang"
+      >
+        {{ lang }}
+      </option>
+    </select>
+  </div>
+  <div class="col-lg-12">
+    <button
+      style="text-align: left"
+      [ngClass]="{ blockquote: showRightToLeft === true }"
+    >
+      {{ "header.home-btn" | translate }}
+    </button>
+    <button
+      style="text-align: left"
+      [ngClass]="{ blockquote: showRightToLeft === true }"
+    >
+      {{ "header.contact-us-btn" | translate }}
+    </button>
+    <button
+      style="text-align: left"
+      [ngClass]="{ blockquote: showRightToLeft === true }"
+    >
+      {{ "header.Logout-btn" | translate }}
+    </button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-2">
+    <div class="wrapper">
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h5 [ngClass]="{ blockquote: showRightToLeft === true }">
+            {{ "sidebar.title" | translate }}
+          </h5>
+        </div>
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                  [ngClass]="{ blockquote: showRightToLeft === true }"
+                >
+                  <i class="fas fa-caret-right"></i>
+                  {{ "sidebar.menu-1" | translate }}
+                </button>
+              </h5>
+            </div>
+
+            <div
+              id="collapseOne"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion"
+            >
+              <div class="card-body"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  [ngClass]="{ blockquote: showRightToLeft === true }"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  {{ "sidebar.menu-2" | translate }}
+                </button>
+              </h5>
+            </div>
+            <div
+              id="collapseTwo"
+              class="collapse"
+              aria-labelledby="headingTwo"
+              data-parent="#accordion"
+            >
+              <div class="card-body"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  [ngClass]="{ blockquote: showRightToLeft === true }"
+                  data-toggle="collapse"
+                  data-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  {{ "sidebar.menu-3" | translate }}<br>{{ "sidebar.menu-32" | translate }}
+                </button>
+              </h5>
+            </div>
+            <div
+              id="collapseThree"
+              class="collapse"
+              aria-labelledby="headingThree"
+              data-parent="#accordion"
+            >
+              <div class="card-body"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  [ngClass]="{ blockquote: showRightToLeft === true }"
+                  data-toggle="collapse"
+                  data-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  {{ "sidebar.menu-4" | translate }}.
+                </button>
+              </h5>
+            </div>
+            <div
+              id="collapseFour"
+              class="collapse"
+              aria-labelledby="headingFour"
+              data-parent="#accordion"
+            >
+              <div class="card-body" style="padding: 0rem">
+                <div id="accordion">
+                  <div class="card">
+                    <div class="card-header sub-card-header" id="headingOne">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link"
+                          data-toggle="collapse"
+                          [ngClass]="{ blockquote: showRightToLeft === true }"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          {{ "sidebar.sub-menu-1" | translate }}
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header sub-card-header" id="headingTwo">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          [ngClass]="{ blockquote: showRightToLeft === true }"
+                          data-toggle="collapse"
+                          data-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          {{ "sidebar.sub-menu-2" | translate }}
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="collapseTwo"
+                      class="collapse "
+                      aria-labelledby="headingTwo"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header sub-card-header" id="headingThree">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          [ngClass]="{ blockquote: showRightToLeft === true }"
+                          data-toggle="collapse"
+                          data-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                          [ngClass]="{ blockquote: showRightToLeft === true }"
+                        >
+                          {{ "sidebar.sub-menu-3" | translate }}
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="collapseThree"
+                      class="collapse"
+                      aria-labelledby="headingThree"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header sub-card-header" id="headingFour">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          [ngClass]="{ blockquote: showRightToLeft === true }"
+                          data-toggle="collapse"
+                          data-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour"
+                        >
+                          {{ "sidebar.sub-menu-4" | translate }}
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="collapseThree"
+                      class="collapse"
+                      aria-labelledby="headingFour"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header sub-card-header" id="headingFive">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          [ngClass]="{ blockquote: showRightToLeft === true }"
+                          data-toggle="collapse"
+                          data-target="#collapseFive"
+                          aria-expanded="false"
+                          aria-controls="collapseFive"
+                        >
+                          {{ "sidebar.sub-menu-5" | translate }}<br>  {{ "sidebar.sub-menu-52" | translate }}
+
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="collapseFive"
+                      class="collapse"
+                      aria-labelledby="headingFive"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header sub-card-header" id="headingSix">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          [ngClass]="{ blockquote: showRightToLeft === true }"
+                          data-toggle="collapse"
+                          data-target="#collapseSix"
+                          aria-expanded="false"
+                          aria-controls="collapseSix"
+                        >
+                          {{ "sidebar.sub-menu-6" | translate }}
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="collapseSix"
+                      class="collapse"
+                      aria-labelledby="headingSix"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header sub-card-header" id="headingSeven">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          [ngClass]="{ blockquote: showRightToLeft === true }"
+                          data-toggle="collapse"
+                          data-target="#collapseSeven"
+                          aria-expanded="false"
+                          aria-controls="collapseSeven"
+                        >
+                          {{ "sidebar.sub-menu-7" | translate }}
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="collapseSeven"
+                      class="collapse"
+                      aria-labelledby="headingSeven"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header sub-card-header" id="headingEight">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          [ngClass]="{ blockquote: showRightToLeft === true }"
+                          data-toggle="collapse"
+                          data-target="#collapseEight"
+                          aria-expanded="false"
+                          aria-controls="collapseEight"
+                        >
+                          {{ "sidebar.sub-menu-8" | translate }}
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="headingEight"
+                      class="collapse"
+                      aria-labelledby="headingEight"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header sub-card-header" id="headingNine">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          [ngClass]="{ blockquote: showRightToLeft === true }"
+                          [ngClass]="{ blockquote: showRightToLeft === true }"
+                          data-toggle="collapse"
+                          data-target="#collapseNine"
+                          aria-expanded="false"
+                          aria-controls="collapseNine"
+                        >
+                          {{ "sidebar.sub-menu-8" | translate }}
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="headingNine"
+                      class="collapse"
+                      aria-labelledby="headingNine"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  [ngClass]="{ blockquote: showRightToLeft === true }"
+                  data-toggle="collapse"
+                  data-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  {{ "sidebar.menu-5" | translate }}
+                </button>
+              </h5>
+            </div>
+            <div
+              id="collapseFive"
+              class="collapse"
+              aria-labelledby="headingFive"
+              data-parent="#accordion"
+            >
+              <div class="card-body"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  [ngClass]="{ blockquote: showRightToLeft === true }"
+                  data-toggle="collapse"
+                  data-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  {{ "sidebar.menu-6" | translate }}
+                </button>
+              </h5>
+            </div>
+            <div
+              id="collapseSix"
+              class="collapse"
+              aria-labelledby="headingSix"
+              data-parent="#accordion"
+            >
+              <div class="card-body"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSeven">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  [ngClass]="{ blockquote: showRightToLeft === true }"
+                  data-toggle="collapse"
+                  data-target="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven"
+                >
+                  {{ "sidebar.menu-7" | translate }}
+                </button>
+              </h5>
+            </div>
+            <div
+              id="collapseSeven"
+              class="collapse"
+              aria-labelledby="headingSeven"
+              data-parent="#accordion"
+            >
+              <div class="card-body"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingEight">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  [ngClass]="{ blockquote: showRightToLeft === true }"
+                  data-toggle="collapse"
+                  data-target="#collapseEight"
+                  aria-expanded="false"
+                  aria-controls="collapseEight"
+                >
+                  {{ "sidebar.menu-8" | translate }}
+                </button>
+              </h5>
+            </div>
+            <div
+              id="headingEight"
+              class="collapse"
+              aria-labelledby="headingEight"
+              data-parent="#accordion"
+            >
+              <div class="card-body"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="col-lg-10">
+    <div class="row mg-0">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-5">
+            <label for="crNumber">{{"form-text.crNumber" | translate}}</label>
+          </div>
+          <div class="col-lg-7">
+            <input
+            [(ngModel)]="crNumber"
+            #ctrl="ngModel"
+            required
+            type="text"
+            class="form-element"
+            style="color: black"/>
+          </div>
+        </div>
+       <div class="row">
+        <div class="col-lg-5">
+          <label for="crNumber">{{"form-text.agencyName" | translate}}</label>
+        </div>
+        <div class="col-lg-7">
+          <input
+          [(ngModel)]="agencyName"
+          #ctrl="ngModel"
+          required
+          type="text"
+          class="form-element"
+          style="color: black"
+        />
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-lg-5">
+          <label for="customCode">{{"form-text.customCode" | translate}}</label>
+        </div>
+       <div class="col-lg-7">
+        <input
+        [(ngModel)]="customCode"
+        #ctrl="ngModel"
+        required
+        type="text"
+        class="form-element"
+        style="color: black"
+      />
+       </div>
+       </div>
+        <div class="row">
+          <div class="col-lg-5">
+            <label for="customCode">{{"form-text.datefrom" | translate}}</label>
+          </div>
+          <div class="col-lg-7">
+            <input
+            [(ngModel)]="creationDate"
+            #ctrl="ngModel"
+            required
+            type="text"
+            class="form-element"
+            style="color: black"
+          />  
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-5">
+            <label for="clearingAgencyType">{{"form-text.clearingAgencyType" | translate}}</label>
+          </div>
+          <div class="col-lg-7">
+            <select name="clearingAgencyType" id="clearingAgencyType">
+              <option value="all">{{"form-text.agencyType-1" | translate}}</option>
+              <option value="private">{{"form-text.agencyType-2" | translate}}</option>
+              <option value="goverment">{{"form-text.agencyType-3" | translate}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-5">
+            <label for="status">{{"form-text.status" | translate}}</label>
+          </div>
+          <div class="col-lg-7">
+            <select name="clearingAgencyType" id="clearingAgencyType">
+              <option value="all">{{"form-text.status-1" | translate}}</option>
+              <option value="pending">{{"form-text.status-2" | translate}}</option>
+              <option value="rejected">{{"form-text.status-3" | translate}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-5">
+            <label for="establishmentId">{{"form-text.establishmentId" | translate}}</label>
+          </div>
+          <div class="col-lg-7">
+            <input
+            [(ngModel)]="establishmentId"
+            #ctrl="ngModel"
+            required
+            type="text"
+            class="form-element"
+            style="color: black"
+          />
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-lg-5">
+          <label for="establishmentId">{{"form-text.creationDateTo" | translate}}</label>
+        </div>
+        <div class="col-lg-7">
+          <input
+          [(ngModel)]="creationDateTo"
+          #ctrl="ngModel"
+          required
+          type="text"
+          class="form-element"
+          style="color: black"
+        />
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row btn-bar">
+      <div class="col-lg-1">
+        <button>{{"form-text.searchText" | translate}}</button>
+      </div>
+      <div class="col-lg-2">
+        <button>{{"form-text.resetText" | translate}}</button>
+      </div>
+      <div class="col-lg-10">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <table
+          datatable
+          [dtOptions]="dtOptions"
+          [dtTrigger]="dtTrigger"
+          class="table table-striped table-bordered"
+        >
+          <thead>
+            <tr>
+              <th>{{ "table.s-no-text" | translate }}</th>
+              <th>{{ "table.establishment-id-text" | translate }}</th>
+              <th>{{ "table.crnumber-text" | translate }}</th>
+              <th>{{ "table.custom-code-text" | translate }}</th>
+              <th>{{ "table.agency-name-text" | translate }}</th>
+              <th>{{ "table.status-text" | translate }}</th>
+              <th>{{ "table.creation-date-to-text" | translate }}</th>
+              <!-- <th>{{'form.creation-date-format-text' | translate}}</th> -->
+              <th>{{ "table.clearing-agency-type-text" | translate }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let client of clients">
+              <td>{{ "datatable.record1.sr" | translate }}</td>
+              <td>{{ "datatable.record1.establishmentId"| translate }}</td>
+              <td> </td>
+              <td>{{"datatable.record1.customCode"| translate }}</td>
+              <td>{{ "datatable.record1.agencyName" | translate }}</td>
+              <td>{{ "datatable.record1.status"|translate }}</td>
+              <td>{{"datatable.record1.creationdateto" | translate }}</td>
+              <td>{{ "datatable.record1.clearingAgencyType" | translate }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

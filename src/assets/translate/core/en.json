@@ -1,0 +1,71 @@
+{
+    "sidebar": {
+      "title":"Good Morning",
+      "menu-1": "System Administration",
+      "menu-2":"Private warehouses",
+      "menu-3":"Sports Events Cleaning",
+      "menu-32":"Agency Authorization",
+      "menu-4":"Registration",
+      "sub-menu-1":"Account Management",
+      "sub-menu-2":"Activate Account",
+      "sub-menu-3": "User Management",
+      "sub-menu-4":"Approve Clearing Agent",
+      "sub-menu-5":"Reset Password/",
+      "sub-menu-52":"Unloack User",
+      "sub-menu-6":"Print User Id Card",
+      "sub-menu-7":"Search for AEO traders",
+      "sub-menu-8":"Create Request",
+      "menu-5":"Cargo Manifest",
+      "menu-6":"Detained Goods",
+      "menu-7":"Declaration",
+      "menu-8":"Tariff Management"
+
+    },
+    "header":{
+      "home-btn":"Home",
+      "contact-us-btn":"Contact Us",
+      "Logout-btn":"Logout"
+    },
+    "table":{
+      "s-no-text":"S/No",
+      "crnumber-text":"CR Number",
+      "agency-name-text":"Agency Name",
+      "custom-code-text":"Custom Code",
+      "creation-date-format-text":"Creation Date Format",
+      "clearing-agency-type-text":"Clearing Agency Type",
+      "status-text":"Status",
+      "establishment-id-text":"Establishment Id",
+      "creation-date-to-text":"Creation Date To"
+    },
+    "form-text":{
+      "crNumber":"CR Number:",
+      "agencyName":"Agency Name",
+      "customCode":"Customs Code:",
+      "datefrom":"Creation Date From:",
+      "status":"Status",
+      "establishmentId":"Establishment Id:",
+      "creationDateTo":"Creation Date To:",
+      "clearingAgencyType":"Clearing Agency Type:",
+      "agencyType-1":"--All--",
+      "agencyType-2":"Private",
+      "agencyType-3":"Goverment",
+      "status-1":"--select--",
+      "status-2":"Pending Approval",
+      "status-3":"Rejected",
+      "searchText":"Serach",
+      "resetText":"Reset"
+
+    },
+    "datatable":{
+     "record1.sr":"1",
+      "record1.establishmentId":"12356784",
+      "record1.customCode":"L2775",
+      "record1.agencyName":"newnm2",
+      "record1.status":"Pending Approval",
+      "record1.creationdateto": "27/08/2023",
+      "record1.clearingAgencyType":"Goverment"
+     
+    }
+    
+  }
+  
